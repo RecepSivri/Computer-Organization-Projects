@@ -1,0 +1,17 @@
+module demo_main();
+	
+	reg [3:0] m;
+	reg [3:0] n;
+	wire [3:0] res;
+	reg [1:0]sel;
+	main  demo(res,m,n,sel);
+	
+	initial begin
+		$monitor(
+	"%b%b%b%b - %b%b%b%b=%b%b%b%b",m[3],m[2],m[1],m[0],n[3],n[2],n[1],n[0],res[3],res[2],res[1],res[0]); 
+	m[3]=1;m[2]=0;m[1]=1;m[0]=1;
+	n[3]=1;n[2]=1;n[1]=0;n[0]=0;
+	sel[0]=0;sel[1]=0;
+	
+	end
+endmodule

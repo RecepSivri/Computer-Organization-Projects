@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Recep Sivri\Desktop\Project03_121044038_Recep_Sivri_TestBench\simulation\modelsim
+vAluModule
+I?d?DkEj[7eUBC1EjcV7@93
+VGI2iR8Fl`T_mj[A^>=Jko1
+Z1 dC:\Users\Recep Sivri\Desktop\Project03_121044038_Recep_Sivri_TestBench\simulation\modelsim
+w1451135005
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/AluModule.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/AluModule.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@alu@module
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench} -O0
+!i10b 1
+!s100 TWUW2KBJlaTEXV>moC>5=1
+!s85 0
+!s108 1451135873.400000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/AluModule.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/AluModule.v|
+!s101 -O0
+vcombineMemoryBlocks
+I8KLmIIiBeaE6lcMmLbdiz3
+VWebKb[Njn7V5GnBhaBod@0
+R1
+w1451135415
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/combineMemoryBlocks.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/combineMemoryBlocks.v
+L0 1
+R2
+r1
+31
+R3
+R4
+ncombine@memory@blocks
+!i10b 1
+!s100 gIBWm;7_6_>2fG6NJSEcC2
+!s85 0
+!s108 1451135873.972000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/combineMemoryBlocks.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/combineMemoryBlocks.v|
+!s101 -O0
+vFetchInstructionModule
+Ii3IKKJC:hn[49dnJ@OOIR2
+V559YA6WYD]IQQ8oj=PUP13
+R1
+w1451134895
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/FetchInstructionModule.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/FetchInstructionModule.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@fetch@instruction@module
+!i10b 1
+!s100 WTAcX=W40i7^6`SK>?Hzb0
+!s85 0
+!s108 1451135873.618000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/FetchInstructionModule.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/FetchInstructionModule.v|
+!s101 -O0
+vmips_core_tester
+!i10b 1
+!s100 mIG^oYoX6E@Eg1`9DDegC0
+IB@30^d@2l7M8ijWVY^B8=1
+V]M:dZjZY_nDHe7V:Bog5`3
+R1
+w1451136111
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1451136192.400000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v|
+!s101 -O0
+o-work work -O0

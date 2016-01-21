@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Recep Sivri\Desktop\ödevler\Sivri_Recep_121044038\Sivri_Recep_121044038\Project03_121044038_Recep_Sivri_TestBench\simulation\modelsim
+vmips_core_testbench
+I3Vc=k6RM>bJ]ZDN_<em[Q1
+V^H5H2[oV6SM;O9HGkmSnh1
+Z1 dC:\Users\Recep Sivri\Desktop\ödevler\Sivri_Recep_121044038\Sivri_Recep_121044038\Project03_121044038_Recep_Sivri_TestBench\simulation\modelsim
+w1449410958
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work work -O0
+!i10b 1
+!s100 ODL19iV0VzLnK[KdzhNLf2
+!s85 0
+!s108 1449499469.625000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v|
+!s101 -O0
+vmips_core_tester
+!i10b 1
+!s100 J_cDE2Ok[^6a=A8^^kdL03
+I^815o;AnH?TW<zc8j5nL<2
+V``3fVgdn41^<cWaYmTzhF3
+R1
+w1449499363
+8C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v
+FC:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1449499469.971000
+!s107 C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v|
+!s101 -O0
+R3

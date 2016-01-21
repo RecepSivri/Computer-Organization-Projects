@@ -1,0 +1,84 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Recep Sivri\Desktop\Project03_121044038_Recep_Sivri_TestBench
+vAluModule
+!i10b 1
+!s100 _K[Nmd=kDBB>=hG=0O3=S0
+IHbfEn9gaEKFX=iG>]@Y3:3
+Z1 Vdb<8?8IhB9=k_QWYYXI8e3
+Z2 dC:\Users\Recep Sivri\Desktop\proje4_2
+w1451337128
+Z3 8C:/Users/Recep Sivri/Desktop/proje4_2/AluModule.v
+Z4 FC:/Users/Recep Sivri/Desktop/proje4_2/AluModule.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1451337252.311000
+!s107 C:/Users/Recep Sivri/Desktop/proje4_2/AluModule.v|
+Z6 !s90 -reportprogress|300|-work|work|-O0|C:/Users/Recep Sivri/Desktop/proje4_2/AluModule.v|
+!s101 -O0
+Z7 o-work work -O0
+Z8 n@alu@module
+vcombineMemoryBlocks
+Z9 !s100 BDBDcnfTI:6??KLfdT36_0
+Z10 If5d7GWCB=RoU:]kzLLf]<2
+Z11 VWebKb[Njn7V5GnBhaBod@0
+R2
+Z12 w1451169849
+Z13 8C:/Users/Recep Sivri/Desktop/proje4_2/combineMemoryBlocks.v
+Z14 FC:/Users/Recep Sivri/Desktop/proje4_2/combineMemoryBlocks.v
+L0 1
+R5
+r1
+31
+Z15 !s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/proje4_2/combineMemoryBlocks.v|
+R7
+Z16 ncombine@memory@blocks
+Z17 !s108 1451240093.648000
+Z18 !s107 C:/Users/Recep Sivri/Desktop/proje4_2/combineMemoryBlocks.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vFetchInstructionModule
+Z19 !s100 LI]5;;j38Pc3eHYoHR^BS1
+Z20 I=Ya3Q2IY^ZiNDIJ[lVUi[2
+Z21 Vl_QS;9PX@;aLL[=`28O8b1
+R2
+Z22 w1451214071
+Z23 8C:/Users/Recep Sivri/Desktop/proje4_2/FetchInstructionModule.v
+Z24 FC:/Users/Recep Sivri/Desktop/proje4_2/FetchInstructionModule.v
+L0 1
+R5
+r1
+31
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/proje4_2/FetchInstructionModule.v|
+R7
+Z26 n@fetch@instruction@module
+Z27 !s108 1451240094.096000
+Z28 !s107 C:/Users/Recep Sivri/Desktop/proje4_2/FetchInstructionModule.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vproject4
+Z29 IjO?5EdGMXi6=mDL^lWVlJ3
+Z30 VfFZI7J_69fZ3l[zXjO]7L0
+R2
+Z31 w1451337229
+Z32 8C:/Users/Recep Sivri/Desktop/proje4_2/mips_core_tester.v
+Z33 FC:/Users/Recep Sivri/Desktop/proje4_2/mips_core_tester.v
+L0 1
+R5
+r1
+31
+Z34 !s90 -reportprogress|300|-work|work|-O0|C:/Users/Recep Sivri/Desktop/proje4_2/mips_core_tester.v|
+R7
+!i10b 1
+Z35 !s100 `Sc?mR6^0_Yz5b624>cbd1
+!s85 0
+Z36 !s108 1451337252.141000
+Z37 !s107 C:/Users/Recep Sivri/Desktop/proje4_2/mips_core_tester.v|
+!s101 -O0

@@ -1,0 +1,241 @@
+module AluModule(counter,instructor,result, input_instruction, rs_content, rt_content);
+
+output reg[31:0]result;
+output reg[31:0]instructor;
+input  signed [31:0]rs_content;
+input  signed [31:0]rt_content;
+input  [31:0]counter;
+input  [31:0]input_instruction;
+reg [31:0]unsignedresult1;
+reg [31:0]unsignedresult2;
+reg[31:0]unsignedElem;
+reg[31:0]unsignedElem2;
+reg [4:0]rs;
+reg [4:0]rt;
+reg [4:0]rd;
+reg [4:0]shamdt;
+reg [5:0]opcode;
+reg [5:0]funct;
+reg [15:0]immediate;
+reg [31:0]counter2;
+always@(counter)
+begin
+  
+  if(counter>0)
+    begin
+      counter2=counter;
+      opcode=input_instruction[31:26];
+      instructor=input_instruction;
+    end
+end
+always@(counter2)
+begin
+    
+    if(opcode==0)
+      begin
+        $display("R type instruction");
+        rs=input_instruction[25:21];
+			  rt=input_instruction[20:16];
+			  rd=input_instruction[15:11];
+			  shamdt=input_instruction[10:6];
+			  funct=input_instruction[5:0];
+			  case (funct)
+				32:begin
+					$display("add");
+					result=rs_content+rt_content;		
+					end
+				33:begin
+					$display("addu");//bonus instruction
+					     unsignedresult1=rs_content;
+					     unsignedresult2=rt_content;
+					result=unsignedresult1+unsignedresult2;		
+				  end
+				34:begin
+				$display("sub");
+					result=rs_content-rt_content;	
+					end
+				36:begin
+				$display("and");
+					result=rs_content&rt_content;	
+					end
+				37:begin
+					$display("or");
+					result=rs_content|rt_content;	
+					end
+				2:begin
+					$display("srl");
+					result=$signed(rt_content) >>> shamdt;
+					end
+				0:begin
+					$display("sll");
+					result=rt_content << shamdt;
+					end
+				43:begin
+					$display("sltu");
+					unsignedresult1=rs_content;
+					unsignedresult2=rt_content;
+					if(unsignedresult1<unsignedresult2)
+						result=1;
+						else
+						result=0;
+					end
+				3:begin
+					$display("sra");
+					result=rt_content>>shamdt;
+					end
+				38:begin
+					$display("xor");
+					result=rt_content^rs_content;
+					end
+				42:begin
+				$display("slt");
+			   if(rs_content<rt_content)
+			     begin
+			       result=1;
+			      end
+			    else
+			      begin
+			       result=0;
+			    end
+				end
+				39:begin
+				$display("nor");//bonus instruction.
+			     result=(rs_content|rt_content)^1;
+				end
+				35:begin
+				$display("subu");//bonus instruction.
+				    unsignedresult1=rs_content;
+				    unsignedresult2=rt_content;
+			     result=unsignedresult1-unsignedresult2;
+				end
+				42:begin
+				$display("sltu");
+				  unsignedElem=rs_content;
+				  unsignedElem2=rt_content;
+			   if(unsignedElem<unsignedElem2)
+			     begin
+			       result=1;
+			      end
+			    else
+			      begin
+			       result=0;
+			    end
+				end
+				8:begin
+				  $display("jr");
+				  $display("content=%d",rt_content);
+				  result=rs_content;
+				  end
+		      endcase
+      end
+      if(opcode==2 || opcode==3)
+        begin
+          $display("j-type  %d",counter);
+          if(opcode==2)
+            begin
+          $display("j");
+            end
+          if(opcode==3)
+            begin
+          $display("jal");
+            end
+        end
+    if(opcode!=2 && opcode!=3&&opcode!=0)
+      begin
+        $display("I type instruction %d",opcode);
+        rs=input_instruction[25:21];
+		    rt=input_instruction[20:16];
+		    immediate=input_instruction[15:0];
+	   	case (opcode)
+			8:begin 
+			$display("addi");
+			result=rs_content+{{16{immediate[15]}}, immediate };
+			
+			end
+			9:begin
+			$display("addiu");
+			unsignedElem=rs_content;
+			unsignedElem2={{16{immediate[15]}}, immediate };
+			result=unsignedElem+unsignedElem2;
+			end
+			13:begin
+			$display("ori");
+				result=rs_content|{{16{immediate[15]}}, immediate };
+			end
+			12:begin
+				$display("andi");
+				result=rs_content&{{16{immediate[15]}}, immediate };
+			end
+			10:begin
+			$display("slti");
+				if(rs_content<{{16{immediate[15]}}, immediate })
+					result=1;
+				else
+					result=0;
+			end
+			11:begin
+			$display("sltui");
+			   unsignedresult1=rs_content;
+			   unsignedresult2={{16{immediate[15]}}, immediate };
+				if(unsignedresult1<unsignedresult2)
+					result=1;
+				else
+					result=0;
+			end
+			14:begin
+			  $display("xori");
+			  result={{16{immediate[15]}}, immediate }^rs_content;
+			  end
+			15:begin
+				$display("lui");
+			 result={{16{immediate[15]}}, immediate }<<16;
+				end
+			35:begin
+			  $display("lw");
+			  result=immediate+rs_content;
+			  end
+			43:begin
+			  $display("sw");
+			  result=immediate+rs_content;
+			  end
+			40:begin
+			  $display("sb");
+			  result=immediate+rs_content;
+			  end
+			32:begin
+			  $display("lb");
+			  result=immediate+rs_content;
+			  end
+			4:begin
+			  $display("beq");
+			  if(rs_content==rt_content)
+			    begin
+			      result=1;
+			     end
+			      else
+			     begin
+			       result=0;   
+			     end
+			  end
+			5:begin
+			  $display("bne");
+			  if(rs_content!=rt_content)
+			    begin
+			      result=1;
+			     end
+			      else
+			     begin
+			       result=0;   
+			     end
+			  end
+			  41:begin
+			    $display("sh");//bonus instruction.
+			    result=rs_content+immediate;
+			    end
+	 endcase
+      end
+      
+end
+
+
+endmodule

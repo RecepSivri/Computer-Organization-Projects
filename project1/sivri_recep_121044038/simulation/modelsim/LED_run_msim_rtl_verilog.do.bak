@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/mux_base.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/mux_full.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/andFourBits.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/xorFourBits.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/fullAdder.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/fullAdder_4bit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/substruct_4bit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/main {C:/Users/Recep Sivri/Desktop/main/main.v}
+

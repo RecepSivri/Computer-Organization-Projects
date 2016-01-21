@@ -1,0 +1,189 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do LED_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/mux_base.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_base
+# 
+# Top level modules:
+# 	mux_base
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/mux_full.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_full
+# 
+# Top level modules:
+# 	mux_full
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andFourBits
+# 
+# Top level modules:
+# 	andFourBits
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module xorFourBits
+# 
+# Top level modules:
+# 	xorFourBits
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder_4bit
+# 
+# Top level modules:
+# 	fullAdder_4bit
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module substruct_4bit
+# 
+# Top level modules:
+# 	substruct_4bit
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/DEMO {C:/Users/Recep Sivri/Desktop/DEMO/main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# 
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/demo_main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module demo_main
+# 
+# Top level modules:
+# 	demo_main
+vsim -voptargs=+acc work.demo_main
+# vsim -voptargs=+acc work.demo_main 
+# Loading work.demo_main
+# Loading work.main
+# Loading work.andFourBits
+# Loading work.xorFourBits
+# Loading work.fullAdder_4bit
+# Loading work.fullAdder
+# Loading work.substruct_4bit
+# Loading work.mux_full
+# Loading work.mux_base
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v(8): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct3/q1
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(17): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe2
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(18): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe3
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(19): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe4
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(21): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/asd
+run
+# 0110 - 1110=1000
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andFourBits
+# 
+# Top level modules:
+# 	andFourBits
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/demo_main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module demo_main
+# 
+# Top level modules:
+# 	demo_main
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder_4bit
+# 
+# Top level modules:
+# 	fullAdder_4bit
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/main.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/mux_base.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_base
+# 
+# Top level modules:
+# 	mux_base
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/mux_full.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_full
+# 
+# Top level modules:
+# 	mux_full
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module substruct_4bit
+# 
+# Top level modules:
+# 	substruct_4bit
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module xorFourBits
+# 
+# Top level modules:
+# 	xorFourBits
+vsim -voptargs=+acc work.demo_main
+# vsim -voptargs=+acc work.demo_main 
+# Loading work.demo_main
+# Loading work.main
+# Loading work.andFourBits
+# Loading work.xorFourBits
+# Loading work.fullAdder_4bit
+# Loading work.fullAdder
+# Loading work.substruct_4bit
+# Loading work.mux_full
+# Loading work.mux_base
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v(8): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct3/q1
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(16): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(17): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe2
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(18): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe3
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(19): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'a'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/qwe4
+# ** Warning: (vsim-3015) C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v(21): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'd'. The port definition is at: C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v(1).
+# 
+#         Region: /demo_main/demo/funct4/asd
+run
+# 0110 - 1110=0100

@@ -1,0 +1,328 @@
+|main_test
+led[0] << main:test.port0
+led[1] << main:test.port0
+led[2] << main:test.port0
+led[3] << main:test.port0
+led[4] << main:test.port0
+led[5] << main:test.port0
+led[6] << main:test.port0
+led[7] << main:test.port0
+led[8] << main:test.port0
+led[9] << main:test.port0
+sw[0] => sw[0].IN1
+sw[1] => sw[1].IN1
+sw[2] => sw[2].IN1
+sw[3] => sw[3].IN1
+sw[4] => sw[4].IN1
+sw[5] => sw[5].IN1
+sw[6] => sw[6].IN1
+sw[7] => sw[7].IN1
+sw[8] => sw[8].IN1
+sw[9] => sw[9].IN1
+
+
+|main_test|main:test
+led[0] <= mux_full:func5.port0
+led[1] <= mux_full:func5.port0
+led[2] <= mux_full:func5.port0
+led[3] <= mux_full:func5.port0
+led[4] <= <GND>
+led[5] <= <GND>
+led[6] <= <GND>
+led[7] <= <GND>
+led[8] <= <GND>
+led[9] <= <GND>
+sw[0] => sw[0].IN4
+sw[1] => sw[1].IN4
+sw[2] => sw[2].IN4
+sw[3] => sw[3].IN4
+sw[4] => sw[4].IN4
+sw[5] => sw[5].IN4
+sw[6] => sw[6].IN4
+sw[7] => sw[7].IN4
+sw[8] => sw[8].IN1
+sw[9] => sw[9].IN1
+
+
+|main_test|main:test|andFourBits:funct1
+res[0] <= r0.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= r1.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= r2.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= r3.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => r0.IN0
+a[1] => r1.IN0
+a[2] => r2.IN0
+a[3] => r3.IN0
+b[0] => r0.IN1
+b[1] => r1.IN1
+b[2] => r2.IN1
+b[3] => r3.IN1
+
+
+|main_test|main:test|xorFourBits:funct2
+res[0] <= r0.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= r1.DB_MAX_OUTPUT_PORT_TYPE
+res[2] <= r2.DB_MAX_OUTPUT_PORT_TYPE
+res[3] <= r3.DB_MAX_OUTPUT_PORT_TYPE
+a[0] => r0.IN0
+a[1] => r1.IN0
+a[2] => r2.IN0
+a[3] => r3.IN0
+b[0] => r0.IN1
+b[1] => r1.IN1
+b[2] => r2.IN1
+b[3] => r3.IN1
+
+
+|main_test|main:test|fullAdder_4bit:funct3
+res[0] <= fullAdder:q1.port0
+res[1] <= fullAdder:q2.port0
+res[2] <= fullAdder:q3.port0
+res[3] <= fullAdder:q4.port0
+c <= fullAdder:q4.port1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+
+
+|main_test|main:test|fullAdder_4bit:funct3|fullAdder:q1
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|fullAdder_4bit:funct3|fullAdder:q2
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|fullAdder_4bit:funct3|fullAdder:q3
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|fullAdder_4bit:funct3|fullAdder:q4
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4
+dif[0] <= fullAdder:asd.port0
+dif[1] <= fullAdder:asd2.port0
+dif[2] <= fullAdder:asd3.port0
+dif[3] <= fullAdder:asd4.port0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => d[0].IN1
+b[1] => d[1].IN1
+b[2] => d[2].IN1
+b[3] => d[3].IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:qwe
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:qwe2
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:qwe3
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:qwe4
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:asd
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:asd2
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:asd3
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|substruct_4bit:funct4|fullAdder:asd4
+s <= q3.DB_MAX_OUTPUT_PORT_TYPE
+c <= q5.DB_MAX_OUTPUT_PORT_TYPE
+a => q1.IN0
+a => q2.IN0
+b => q1.IN1
+b => q2.IN1
+d => q3.IN1
+d => q4.IN1
+
+
+|main_test|main:test|mux_full:func5
+fout[0] <= mux_base:calcbit0.port0
+fout[1] <= mux_base:calcbit1.port0
+fout[2] <= mux_base:calcbit2.port0
+fout[3] <= mux_base:calcbit3.port0
+selector[0] => selector[0].IN4
+selector[1] => selector[1].IN4
+adder[0] => adder[0].IN1
+adder[1] => adder[1].IN1
+adder[2] => adder[2].IN1
+adder[3] => adder[3].IN1
+subtractor[0] => subtractor[0].IN1
+subtractor[1] => subtractor[1].IN1
+subtractor[2] => subtractor[2].IN1
+subtractor[3] => subtractor[3].IN1
+andop[0] => andop[0].IN1
+andop[1] => andop[1].IN1
+andop[2] => andop[2].IN1
+andop[3] => andop[3].IN1
+xorop[0] => xorop[0].IN1
+xorop[1] => xorop[1].IN1
+xorop[2] => xorop[2].IN1
+xorop[3] => xorop[3].IN1
+
+
+|main_test|main:test|mux_full:func5|mux_base:calcbit0
+f <= result.DB_MAX_OUTPUT_PORT_TYPE
+s0 => a2.IN0
+s0 => a4.IN0
+s0 => a1.IN0
+s0 => a3.IN0
+s1 => a3.IN1
+s1 => a4.IN1
+s1 => a1.IN1
+s1 => a2.IN1
+b0 => a1.IN2
+b1 => a2.IN2
+b2 => a3.IN2
+b3 => a4.IN2
+
+
+|main_test|main:test|mux_full:func5|mux_base:calcbit1
+f <= result.DB_MAX_OUTPUT_PORT_TYPE
+s0 => a2.IN0
+s0 => a4.IN0
+s0 => a1.IN0
+s0 => a3.IN0
+s1 => a3.IN1
+s1 => a4.IN1
+s1 => a1.IN1
+s1 => a2.IN1
+b0 => a1.IN2
+b1 => a2.IN2
+b2 => a3.IN2
+b3 => a4.IN2
+
+
+|main_test|main:test|mux_full:func5|mux_base:calcbit2
+f <= result.DB_MAX_OUTPUT_PORT_TYPE
+s0 => a2.IN0
+s0 => a4.IN0
+s0 => a1.IN0
+s0 => a3.IN0
+s1 => a3.IN1
+s1 => a4.IN1
+s1 => a1.IN1
+s1 => a2.IN1
+b0 => a1.IN2
+b1 => a2.IN2
+b2 => a3.IN2
+b3 => a4.IN2
+
+
+|main_test|main:test|mux_full:func5|mux_base:calcbit3
+f <= result.DB_MAX_OUTPUT_PORT_TYPE
+s0 => a2.IN0
+s0 => a4.IN0
+s0 => a1.IN0
+s0 => a3.IN0
+s1 => a3.IN1
+s1 => a4.IN1
+s1 => a1.IN1
+s1 => a2.IN1
+b0 => a1.IN2
+b1 => a2.IN2
+b2 => a3.IN2
+b3 => a4.IN2
+
+

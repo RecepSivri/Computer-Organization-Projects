@@ -1,0 +1,207 @@
+module mips_core_de0 (result, input_instruction);
+	output reg [31:0] result;
+	input [31:0] input_instruction;
+	reg [31:0] input_instruction2;
+	reg [31:0] registers [0:31];
+	reg signed[31:0] result2;
+	reg [31:0] rs_content;
+	reg [31:0] rt_content;
+	reg [31:0]unsignedresult1;
+	reg [31:0]unsignedresult2;
+	reg[31:0]unsignedElem;
+	reg[31:0]unsignedElem2;
+	reg [4:0]rs;
+	reg [4:0]rt;
+	reg [4:0]rd;
+	reg [4:0]shamdt;
+	wire [5:0]opcode;
+	reg [5:0]funct;
+	reg [15:0]immediate;
+	assign opcode=input_instruction[31:26];
+	initial 
+	begin
+	registers [0]=12;
+	registers [1]=13;
+	registers [2]=14;
+	registers [3]=15;
+	registers [4]=16;
+	registers [5]=17;
+	registers [6]=18;
+	registers [7]=19;
+	registers [8]=20;
+	registers [9]=21;
+	registers [10]=22;
+	registers [11]=23;
+	registers [12]=24;
+	registers [13]=25;
+	registers [14]=26;
+	registers [15]=27;
+	registers [16]=28;
+	registers [17]=29;
+	registers [18]=30;
+	registers [19]=31;
+	registers [20]=32;
+	registers [21]=33;
+	registers [22]=34;
+	registers [23]=35;
+	registers [24]=36;
+	registers [25]=37;
+	registers [26]=38;
+	registers [27]=39;
+	registers [28]=40;
+	registers [29]=41;
+	registers [30]=42;
+	registers [31]=43;
+	end
+
+	always @(opcode)
+	begin	
+	input_instruction2=input_instruction;
+if(opcode==0)
+begin
+	
+		rs=input_instruction2[25:21];
+		$display("rs=%b",rs);
+		rt=input_instruction2[20:16];
+		$display("rt=%b",rt);
+		rd=input_instruction2[15:11];
+		$display("rd=%b",rd);
+		shamdt=input_instruction2[10:6];
+		$display("shamdt=%b",shamdt);
+		funct=input_instruction2[5:0];
+		$display("funct=%b",funct);
+		rs_content=registers[rs];
+		rt_content=registers[rt];
+		$display("rs_content=%b",rs_content);
+		$display("rt_content=%b",rt_content);
+	
+	case (funct)
+			32:begin
+				$display("add");
+				$display("%h\n",rs_content);
+				$display("%h\n",rt_content);
+				result=rs_content+rt_content;		
+				registers[rd]=result;
+				end
+			34:begin
+			$display("sub");
+				$display("rs%h\n",rs_content);
+				$display("rt%h\n",rt_content);
+				result=rs_content-rt_content;	
+				registers[rd]=result;
+				end
+			36:begin
+			$display("and");
+				$display("%b\n",rs_content);
+				$display("%b\n",rt_content);
+				result=rs_content&rt_content;	
+				registers[rd]=result;
+				end
+			37:begin
+				$display("or");
+				$display("%b\n",rs_content);
+				$display("%b\n",rt_content);
+				result=rs_content|rt_content;	
+				registers[rd]=result;
+				end
+			2:begin
+				$display("srl");
+				$display("%d\n",rt);
+				$display("content:%d\n",rs_content);
+				$display("content:%b\n",rt_content);
+				result=$signed(rt_content) >>> shamdt;
+				registers[rd]=result;
+				end
+			0:begin
+				$display("sll");
+				$display("%b\n",rt_content);
+				result=rt_content << shamdt;
+				registers[rd]=result;
+				end
+			43:begin
+				$display("sltu");
+				unsignedresult1=rs_content;
+				unsignedresult2=rt_content;
+				$display("content of rs =%h", rs_content);
+				$display("content of rt =%h", rt_content);
+				if(unsignedresult1<unsignedresult2)
+					result=1;
+					else
+					result=0;
+				registers[rd]=result;
+				end
+					
+			3:begin
+				$display("sra");
+				$display("%d\n",rt);
+				$display("content:%d\n",rs_content);
+				$display("content:%b\n",rt_content);
+				result=rt_content>>shamdt;
+				registers[rd]=result;
+				end
+	endcase
+	$display("result R type= %d",registers[rd]);
+	$display("result R type= %b",registers[rd]);
+end
+if(opcode != 0)
+begin		
+		rs=input_instruction2[25:21];
+		$display("rs=%b",rs);
+		rt=input_instruction2[20:16];
+		$display("rt=%b",rt);
+		immediate=input_instruction2[15:0];
+		$display("immediate=%b",immediate);
+		rs_content=registers[rs];
+		$display("rs_content=%b",rs_content);
+	
+	 case (opcode)
+			8:begin 
+			$display("addi");
+			$display("content of rs=%h",rs_content);
+			result=rs_content+{{16{immediate[15]}}, immediate };
+			registers[rt]=result;
+			end
+			9:begin
+			$display("addiu");
+			unsignedElem=rs_content;
+			unsignedElem2={{16{immediate[15]}}, immediate };
+			result=unsignedElem+unsignedElem2;
+			registers[rt]=result;
+			end
+			13:begin
+			$display("ori");
+				$display("content of rs: %b",rs_content);
+				$display("immediate: %b",{{16{immediate[15]}}, immediate });
+				result=rs_content|{{16{immediate[15]}}, immediate };
+				registers[rt]=result;
+			end
+			12:begin
+				$display("andi");
+				$display("content of rs: %b",rs_content);
+				$display("immediate: %b",{{16{immediate[15]}}, immediate });
+				result=rs_content&{{16{immediate[15]}}, immediate };
+				registers[rt]=result;
+			end
+			10:begin
+			$display("slti");
+			$display("content of rs: %b",rs_content);
+			$display("immediate: %b",{{16{immediate[15]}}, immediate });
+				if(rs_content<{{16{immediate[15]}}, immediate })
+					result=1;
+				else
+					result=0;
+			registers[rt]=result;
+			end
+			15:begin
+				$display("lui");
+				$display("immediate: %b",{{16{immediate[15]}}, immediate });
+			 result={{16{immediate[15]}}, immediate }<<16;
+			 registers[rt]=result;
+				end
+	 endcase	 
+	 $display("result I type= %d",registers[rt]);
+	 $display("result I type= %b",registers[rt]);
+end
+end
+
+endmodule

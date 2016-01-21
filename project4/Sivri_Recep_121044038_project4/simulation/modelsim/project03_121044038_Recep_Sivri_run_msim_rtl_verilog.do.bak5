@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/gÃ¶nderilecek {C:/Users/Recep Sivri/Desktop/gönderilecek/mips_core_testbench.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/gÃ¶nderilecek {C:/Users/Recep Sivri/Desktop/gönderilecek/mips_core_tester.v}
+

@@ -1,0 +1,180 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Recep Sivri\Desktop\DEMO\simulation\modelsim
+vandFourBits
+I1iP_e3PIUKWEE<NNz2?nA2
+Vfgij83]:AiV;lQ>XNfk:32
+Z1 dC:\Users\Recep Sivri\Desktop\DEMO\simulation\modelsim
+w1444365845
+8C:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v
+FC:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-work work -O0
+nand@four@bits
+!i10b 1
+!s100 [2@7S9_OA_^h6fIo[MMQZ3
+!s85 0
+!s108 1444416786.524000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/andFourBits.v|
+!s101 -O0
+vdemo_main
+IGEfFPFa2A1J50zb@n@5DL3
+V]E`QXU_k41cF;o>R`4Q_]3
+R1
+w1444416778
+8C:/Users/Recep Sivri/Desktop/DEMO/demo_main.v
+FC:/Users/Recep Sivri/Desktop/DEMO/demo_main.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 CbW7Bi>G:gW5K=iJZ]J<M3
+!s85 0
+!s108 1444416786.803000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/demo_main.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/demo_main.v|
+!s101 -O0
+vfullAdder
+IUQ=`Y6gAEP2@@njC=EM:W0
+VMWL_:R6VY`PTOBd?^9PLW1
+R1
+w1444365965
+8C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v
+FC:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v
+L0 1
+R2
+r1
+31
+R3
+nfull@adder
+!i10b 1
+!s100 i>jO^=]em9ZeB];01S1KW1
+!s85 0
+!s108 1444416787.056000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/fullAdder.v|
+!s101 -O0
+vfullAdder_4bit
+IjJBURfR1ARbF1O3g5RG[Y1
+V6Ee1A;Pbj5R>@eR060STS2
+R1
+w1444366000
+8C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v
+FC:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v
+L0 1
+R2
+r1
+31
+R3
+nfull@adder_4bit
+!i10b 1
+!s100 =aJ[aS[1k^_P;7lRR4ET51
+!s85 0
+!s108 1444416787.299000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/fullAdder_4bit.v|
+!s101 -O0
+vmain
+IGZi9`JTV^`YiK;o@j7PR:1
+Vb9EoOS>EEil;ZNdHm3C8k0
+R1
+w1444416536
+8C:/Users/Recep Sivri/Desktop/DEMO/main.v
+FC:/Users/Recep Sivri/Desktop/DEMO/main.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 aSN?VeTIdRco^L]bD]>[C3
+!s85 0
+!s108 1444416787.549000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/main.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/main.v|
+!s101 -O0
+vmux_base
+IcaR5QzRzn6aP83W4MWjIA3
+Vb8@SHQHDT7392]z;SZdVo1
+R1
+w1444365706
+8C:/Users/Recep Sivri/Desktop/DEMO/mux_base.v
+FC:/Users/Recep Sivri/Desktop/DEMO/mux_base.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 2Ol>3T]kEHF4LNBhGJ<Gd3
+!s85 0
+!s108 1444416787.815000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/mux_base.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/mux_base.v|
+!s101 -O0
+vmux_full
+IjXm6`_H@7IGZBViF7BAo41
+V0GSaX=KC`2P6WL]R1670H3
+R1
+w1444365731
+8C:/Users/Recep Sivri/Desktop/DEMO/mux_full.v
+FC:/Users/Recep Sivri/Desktop/DEMO/mux_full.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 PThColeYajNI3]=<JIATH2
+!s85 0
+!s108 1444416788.086000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/mux_full.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/mux_full.v|
+!s101 -O0
+vsubstruct_4bit
+IZOf3=?eaGD1G`dZVil@Of1
+Vb@WFi0?oI=P=aF9gFS0V90
+R1
+w1444366051
+8C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v
+FC:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 6h^@3o6@0C;b]99iWWZoj0
+!s85 0
+!s108 1444416788.371000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/substruct_4bit.v|
+!s101 -O0
+vxorFourBits
+!i10b 1
+!s100 KjIQMEYQC]0M62cP9dkVJ2
+IGMI2dc@5RHB5OP8hG4Z<E1
+V]Md`kZAA<ljTSdoI3<4BB1
+R1
+w1444365913
+8C:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v
+FC:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1444416788.652000
+!s107 C:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Recep Sivri/Desktop/DEMO/xorFourBits.v|
+!s101 -O0
+R3
+nxor@four@bits

@@ -1,0 +1,390 @@
+Analysis & Synthesis report for project03_121044038_Recep_Sivri
+Sat Dec 26 13:29:16 2015
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |mips_core_tester
+ 10. Port Connectivity Checks: "mips_core_testbench:asd"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 26 13:29:16 2015      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; project03_121044038_Recep_Sivri            ;
+; Top-level Entity Name              ; mips_core_tester                           ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 1                                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                     ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Option                                                                     ; Setting            ; Default Value                   ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Top-level entity name                                                      ; mips_core_tester   ; project03_121044038_Recep_Sivri ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX                   ;
+; Use smart compilation                                                      ; Off                ; Off                             ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
+; Enable compact report table                                                ; Off                ; Off                             ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                            ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                             ;
+; Preserve fewer node names                                                  ; On                 ; On                              ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001                    ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                       ;
+; State Machine Processing                                                   ; Auto               ; Auto                            ;
+; Safe State Machine                                                         ; Off                ; Off                             ;
+; Extract Verilog State Machines                                             ; On                 ; On                              ;
+; Extract VHDL State Machines                                                ; On                 ; On                              ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                             ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                              ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                              ;
+; Parallel Synthesis                                                         ; On                 ; On                              ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                            ;
+; NOT Gate Push-Back                                                         ; On                 ; On                              ;
+; Power-Up Don't Care                                                        ; On                 ; On                              ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                             ;
+; Remove Duplicate Registers                                                 ; On                 ; On                              ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                             ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                             ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                             ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                             ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                             ;
+; Optimization Technique                                                     ; Balanced           ; Balanced                        ;
+; Carry Chain Length                                                         ; 70                 ; 70                              ;
+; Auto Carry Chains                                                          ; On                 ; On                              ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                             ;
+; Auto ROM Replacement                                                       ; On                 ; On                              ;
+; Auto RAM Replacement                                                       ; On                 ; On                              ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                              ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                            ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                              ;
+; Strict RAM Replacement                                                     ; Off                ; Off                             ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                              ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                             ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                              ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                             ;
+; Auto Resource Sharing                                                      ; Off                ; Off                             ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                             ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                              ;
+; Report Parameter Settings                                                  ; On                 ; On                              ;
+; Report Source Assignments                                                  ; On                 ; On                              ;
+; Report Connectivity Checks                                                 ; On                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                             ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                               ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation              ;
+; HDL message level                                                          ; Level2             ; Level2                          ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                             ;
+; Clock MUX Protection                                                       ; On                 ; On                              ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                             ;
+; Block Design Naming                                                        ; Auto               ; Auto                            ;
+; SDC constraint protection                                                  ; Off                ; Off                             ;
+; Synthesis Effort                                                           ; Auto               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                              ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                             ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                            ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                              ;
+; Synthesis Seed                                                             ; 1                  ; 1                               ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; mips_core_testbench.v            ; yes             ; User Verilog HDL File        ; C:/Users/Recep Sivri/Desktop/ödevler/organizasyon ödevleri/proje3/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v ;         ;
+; mips_core_tester.v               ; yes             ; User Verilog HDL File        ; C:/Users/Recep Sivri/Desktop/ödevler/organizasyon ödevleri/proje3/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v    ;         ;
+; registers.h                      ; yes             ; Auto-Found Unspecified File  ; C:/Users/Recep Sivri/Desktop/ödevler/organizasyon ödevleri/proje3/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/registers.h           ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 1                ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; a                ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 1                ;
+; Average fan-out          ; 0.50             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |mips_core_tester          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 1    ; 0            ; |mips_core_tester   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |mips_core_tester ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; bit_size       ; 32    ; Signed Integer                                          ;
+; elem_size      ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips_core_testbench:asd"                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Dec 26 13:29:13 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project03_121044038_Recep_Sivri -c project03_121044038_Recep_Sivri
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file mips_core_testbench.v
+    Info (12023): Found entity 1: mips_core_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mips_core_tester.v
+    Info (12023): Found entity 1: mips_core_tester
+Info (12127): Elaborating entity "mips_core_tester" for the top level hierarchy
+Warning (10855): Verilog HDL warning at mips_core_tester.v(20): initial value for variable contentRs should be constant
+Warning (10855): Verilog HDL warning at mips_core_tester.v(20): initial value for variable contentRt should be constant
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           0   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           1   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           2   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           3   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           4   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           5   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           6   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           7   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           8   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):           9   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          10   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          11   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          12   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          13   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          14   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          15   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          16   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          17   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          18   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          19   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          20   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          21   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          22   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          23   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          24   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          25   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          26   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          27   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          28   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          29   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          30   00000000
+Info (10648): Verilog HDL Display System Task info at mips_core_tester.v(33):          31   00000000
+Warning (10235): Verilog HDL Always Construct warning at mips_core_tester.v(41): variable "opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_tester.v(43): variable "inInst" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10175): Verilog HDL warning at mips_core_tester.v(45): ignoring unsupported system task
+Warning (10235): Verilog HDL Always Construct warning at mips_core_tester.v(47): variable "opcode" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_tester.v(49): variable "rt" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10175): Verilog HDL warning at mips_core_tester.v(50): ignoring unsupported system task
+Warning (10175): Verilog HDL warning at mips_core_tester.v(54): ignoring unsupported system task
+Warning (10240): Verilog HDL Always Construct warning at mips_core_tester.v(39): inferring latch(es) for variable "rd", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "mips_core_testbench" for hierarchy "mips_core_testbench:asd"
+Warning (10036): Verilog HDL or VHDL warning at mips_core_testbench.v(11): object "rs" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mips_core_testbench.v(12): object "rt" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mips_core_testbench.v(13): object "rd" assigned a value but never read
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(25): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(27): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(29): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(31): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(33): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(40): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(40): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(46): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(46): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(52): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(52): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(58): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(58): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(65): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(70): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(74): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(75): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(89): variable "rt_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at mips_core_testbench.v(35): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(95): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(97): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(99): variable "input_instruction" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(105): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(110): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(118): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(124): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at mips_core_testbench.v(130): variable "rs_content" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at mips_core_testbench.v(101): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "shamdt", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "funct", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "unsignedresult1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "unsignedresult2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "immediate", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "unsignedElem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mips_core_testbench.v(20): inferring latch(es) for variable "unsignedElem2", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "result[0]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[1]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[2]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[3]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[4]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[5]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[6]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[7]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[8]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[9]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[10]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[11]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[12]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[13]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[14]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[15]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[16]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[17]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[18]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[19]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[20]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[21]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[22]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[23]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[24]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[25]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[26]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[27]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[28]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[29]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[30]" at mips_core_testbench.v(93)
+Info (10041): Inferred latch for "result[31]" at mips_core_testbench.v(93)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a"
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 573 megabytes
+    Info: Processing ended: Sat Dec 26 13:29:16 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

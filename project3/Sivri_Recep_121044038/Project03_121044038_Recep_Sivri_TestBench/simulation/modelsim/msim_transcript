@@ -1,0 +1,90 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do project03_121044038_Recep_Sivri_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench {C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core_testbench
+# 
+# Top level modules:
+# 	mips_core_testbench
+# vlog -vlog01compat -work work +incdir+C:/Users/Recep\ Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench {C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core_tester
+# 
+# Top level modules:
+# 	mips_core_tester
+# 
+# ** Error: (vish-7) Failed to open info file "C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/simulation/modelsim/rtl_work/_info" in read mode.
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vish-7) Failed to open info file "C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/simulation/modelsim/rtl_work/_info" in read mode.
+# No such file or directory. (errno = ENOENT)
+vsim -voptargs=+acc work.mips_core_tester
+# vsim -voptargs=+acc work.mips_core_tester 
+# Loading work.mips_core_tester
+# Loading work.mips_core_testbench
+run
+#           0   000070a4
+#           1   00000012
+#           2   00000013
+#           3   00000014
+#           4   00000015
+#           5   00000016
+#           6   00000017
+#           7   00000018
+#           8   fffffff1
+#           9   00000020
+#          10   00000021
+#          11   00000022
+#          12   00000023
+#          13   00000024
+#          14   00000011
+#          15   00000026
+#          16   00000027
+#          17   00000028
+#          18   00000029
+#          19   00000030
+#          20   00000031
+#          21   00000032
+#          22   00000033
+#          23   00000034
+#          24   00000035
+#          25   fff00000
+#          26   00000037
+#          27   00000038
+#          28   00000039
+#          29   00000040
+#          30   00000041
+#          31   00000042
+# rs=00000
+# rt=00000
+# immediate=70a4
+# andi
+# content of rs: 00000000000000000111000010100100
+# immediate: 00000000000000000111000010100100
+# resultin test files=00000000000000000111000010100100
+# 000070a4
+# ** Error: (vish-7) Failed to open info file "C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/simulation/modelsim/rtl_work/_info" in read mode.
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vish-7) Failed to open info file "C:/Users/Recep Sivri/Desktop/ödevler/Sivri_Recep_121044038/Sivri_Recep_121044038/Project03_121044038_Recep_Sivri_TestBench/simulation/modelsim/rtl_work/_info" in read mode.
+# No such file or directory. (errno = ENOENT)
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core_testbench
+# 
+# Top level modules:
+# 	mips_core_testbench
+vlog -reportprogress 300 -work work {C:/Users/Recep Sivri/Desktop/Project03_121044038_Recep_Sivri_TestBench/mips_core_tester.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips_core_tester
+# 
+# Top level modules:
+# 	mips_core_tester
